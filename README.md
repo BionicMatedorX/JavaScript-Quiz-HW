@@ -1,2 +1,2 @@
 # JavaScript-Quiz-HW
-This is a quiz app we are tasked with coding, html, css, and most importantly the java script.
+This quiz app was designed to go over questions for general web development, covers html, css, tag usage and more. This short quiz presents the user with a timer and with a highscore tracker at the end where they can keep record of their scores.

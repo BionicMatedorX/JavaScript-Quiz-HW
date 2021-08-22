@@ -2,85 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Start Button -->
-    <div class="start_btn"><button>Start Quiz</button></div>
+    <div class="container">
 
-    <!-- Info Box -->
-    <div class="info_box">
-        <div class="info_title">
-            <span>Rules of this Quiz</span>
+        <div id="startpage">
+            
+            <h2>Welcome to the Coding Quiz</h2>
+            
+            <h2>Lets get Started!</h2>
+        
+                <button id="startbtn">Start Quiz</button>
+                <button id="startPageHighscore" onclick="showHighscore()">High Scores</button>
         </div>
-        <div class="info_list">
-            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-            <div class="info">2. Once you select your answer, you can't reselect.</div>
-            <div class="info">3. You can't select an answer when time runs out.</div>
-            <div class="info">4. You can't exit from the Quiz once you begin.</div>
-            <div class="info">5. You earn points on the basis of your correct answers.</div>
-        </div>
-        <div class="buttons">
-            <button class="quit">Exit Quiz</button>
-            <button class="restart">Continue</button>
-        </div>
-    </div>
-    <!-- Quiz Box -->
-    <div class="quiz_box">
-        <header>
-            <div class="title">Welcome to the JavaScript Quiz</div>
-            <div class="timer">
-                <div class="time_text"> Time Left</div>
-                <div class="timer_sec">15</div>
-            </div>
-        </header>
-        <section>
-            <div class="que_text">
-                <!-- <span>What does HTML stand for?</span> -->
-            </div>
-            <div class="option_list">
-                <!-- <div class="option">
-                    <span>Hyper Text Preprocessor</span>
-                    <div class="icon tick"></div>
-                </div>
-                <div class="option">
-                    <span>Hyper Text Markup Language</span>
-                    <div class="icon cross"></div>
-                </div>
-                <div class="option">
-                    <span>Hyper Text Mulitple Language</span>
-                </div>
-                <div class="option">
-                    <span>Hyper Text Multi Language</span>
-                </div> -->
-            </div>
-        </section>
-        <footer>
-            <div class="total_que">
-                <span><p>2</p>of<p>5</p>Questions</span>
-            </div>
-            <button class="next_btn">Next Question</button>
-        </footer>
-    </div>
-    
-    <!-- Results Box -->
-    <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text"> You've finished the Quiz!</div>
-        <div class="score_text">
-            <span>You scored <p>2</p> out of <p>5</p></span>
-        </div>
-        <div class="buttons">
-            <button class="restart"> Replay Quiz</button>
-            <button class="quit"> Quit Quiz</button>
-        </div>
-    </div>
 
+                        <div id="quiz">
+                        <div id="timer">Time left: </div>
+                            <div id="questions"><p>Questions Placeholder</p></div>
+                            
+                            <button id="a" onclick="checkAnswer('a')">A</button>
+                            <button id="b" onclick="checkAnswer('b')">B</button>
+                            <button id="c" onclick="checkAnswer('c')">C</button>
+                            <button id="d" onclick="checkAnswer('d')">D</button>
+                        
+                        <div id="result"></div>
+                        </div>
+
+                        <div id="gameover">
+
+                         <div id="finalScore"></div>
+                            <input type="text" size = "40" placeholder="Enter your initials for high score" name="intials" id="initials"/>
+                            <button id="submitScore">Submit Score</button>
+                         </div>
+
+        <div id=highscoreContainer>
+        <div id="high-scorePage">
+            
+            <div id="highscore-header">
+                <h3>User Initials</h3>
+                <h3>Score</h3>
+            </div>
+            
+            <div id = "highscore-initials"></div>
+            <div id = "highscore-score"></div>
+
+        </div>
+        
+        <div id="endGameBtns">
+            <button id="playAgain" onclick="replayQuiz()">Play Again</button>
+            <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
+        </div>
+        </div>
+
+    </div>
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/questions.js"></script>
+    
 </body>
-</html>
+</html> 
